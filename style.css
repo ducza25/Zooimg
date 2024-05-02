@@ -1,0 +1,95 @@
+:root {
+  --menu-display: flex;
+}
+
+body {
+  background-color: rgb(49, 85, 204);
+  color: rgb(238, 238, 238);
+}
+html {
+  text-align: center;
+  margin: 0;
+  padding-top: 60px;
+}
+
+#gombok {
+  background-color: #2594d4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+}
+
+nav {
+  background-color: rgb(23, 55, 236);
+  padding: 5px 0px;
+  text-align: center;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 60px;
+  display: var(--menu-display);
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  transition: bottom 0.5s ease;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+  padding: 2px 10px;
+}
+
+nav a:hover {
+  background-color: grey;
+}
+
+#menuCheckBox {
+  display: none;
+}
+#menuLabel {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --bottom-menu-bottom-position: -50px;
+  }
+
+  nav a {
+    font-size: 22px;
+  }
+  nav {
+    flex-direction: column;
+    height: auto;
+    bottom: 50px;
+    top: auto;
+    bottom: var(--bottom-menu-bottom-position);
+    padding: 0;
+  }
+  html {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+  #menuLabel {
+    position: fixed;
+    bottom: 0%;
+    height: 50px;
+    background-color: rgb(48, 89, 202);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: aliceblue;
+    width: 100%;
+    font-size: larger;
+    left: 0;
+  }
+}
