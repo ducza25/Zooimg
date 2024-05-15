@@ -92,4 +92,15 @@ nav a:hover {
     font-size: larger;
     left: 0;
   }
+  body:has(#menuCheckBox:checked) {
+    --bottom-menu-bottom-position: 50px;
+  }
+  #targetImg {
+    width: 100px;
+    height: 200px;
+    border: 5px rgb(241, 232, 232);
+  }
+  #targetImg {
+    width: 100%;
+  }
 }
